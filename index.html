@@ -1,16 +1,275 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Shengyuan Wang</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shengyuan Wang</title>
+  <style>
+    :root {
+      --bg: #ecebea;
+      --fg: #101010;
+      --muted: #4b4b4b;
+      --panel: #050505;
+      --panel-fg: #f5f1e8;
+      --accent: #d8b100;
+      --line: rgba(16, 16, 16, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 2.5rem 4rem 1rem;
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 35%),
+        var(--bg);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(320px, 1fr) minmax(320px, 680px);
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 1rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 8ch;
+      font-size: clamp(3rem, 6vw, 5.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .lead {
+      max-width: 36rem;
+      margin: 2rem 0 2.5rem;
+      color: var(--muted);
+      font-size: 1.35rem;
+      line-height: 1.55;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .input {
+      min-width: min(100%, 24rem);
+      padding: 1.15rem 1.25rem;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.25);
+      color: var(--fg);
+      font-size: 1rem;
+    }
+
+    .button {
+      padding: 1.15rem 1.75rem;
+      border: 1px solid var(--fg);
+      background: transparent;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .portrait-card {
+      position: relative;
+      min-height: 720px;
+      overflow: hidden;
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.16), rgba(0, 0, 0, 0.1)),
+        #b9b2ab;
+    }
+
+    .portrait-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portrait-fallback {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      background:
+        linear-gradient(145deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.35)),
+        linear-gradient(180deg, #a09a93, #6c6662);
+    }
+
+    .portrait-fallback span {
+      max-width: 18rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .story {
+      padding: 8rem 2rem 9rem;
+      color: var(--panel-fg);
+      text-align: center;
+      background:
+        radial-gradient(circle at top center, rgba(216, 177, 0, 0.12), transparent 20%),
+        var(--panel);
+    }
+
+    .story p {
+      max-width: 18ch;
+      margin: 0 auto;
+      font-size: clamp(2.2rem, 4vw, 4.6rem);
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+    }
+
+    .story .button {
+      margin-top: 4rem;
+      padding-inline: 3rem;
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .meta {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        padding: 1.5rem 1.25rem 0;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2.5rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 0.9rem 1.1rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      h1 {
+        max-width: none;
+      }
+
+      .lead {
+        font-size: 1.1rem;
+      }
+
+      .portrait-card {
+        min-height: 420px;
+      }
+
+      .story {
+        padding: 5rem 1.25rem 6rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Shengyuan Wang</h1>
-    <p>Computational Biologist at UVA</p>
-    <p>Research interests: functional genomics, transcriptional regulation, multi-omics integration.</p>
+  <main>
+    <section class="hero" id="top">
+      <nav class="nav">
+        <a class="brand" href="#top">Shengyuan Wang</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
 
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="https://github.com/zang-lab/CTCFexplorer">CTCFexplorer</a></li>
-    </ul>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Computational Biology</p>
+          <h1>Building data-driven stories in genomics.</h1>
+          <p class="lead">
+            I study transcriptional regulation, multi-omics integration, and chromatin structure.
+            This page can act as a clean personal landing page for your work, projects, and contact information.
+          </p>
+          <form class="cta-row" id="contact" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <input class="input" type="email" name="email" placeholder="Email address">
+            <button class="button" type="submit">Contact Me</button>
+          </form>
+          <p class="meta">Replace the email action and profile image with your own details.</p>
+        </div>
+
+        <div class="portrait-card" aria-label="Profile image">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 1000'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%239a948e'/%3E%3Cstop offset='1' stop-color='%235f5a56'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='1000' fill='url(%23g)'/%3E%3Ccircle cx='400' cy='320' r='120' fill='%23d9d2cb' fill-opacity='.88'/%3E%3Cpath d='M175 870c25-190 145-280 225-280s200 90 225 280' fill='%23d9d2cb' fill-opacity='.88'/%3E%3Ctext x='400' y='940' fill='white' font-family='Helvetica, Arial, sans-serif' font-size='34' text-anchor='middle'%3EReplace with your photo%3C/text%3E%3C/svg%3E"
+            alt="Placeholder portrait. Replace with your own photo file."
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="about">
+      <p>
+        I work at the intersection of biology, computation, and visual storytelling,
+        turning complex genomics data into clear, useful insight.
+      </p>
+      <a class="button" id="research" href="https://github.com/zang-lab/CTCFexplorer">View Project</a>
+    </section>
+  </main>
 </body>
 </html>
