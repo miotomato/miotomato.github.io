@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shengyuan Wang | CV</title>
+  <style>
+    :root {
+      --bg: #ddd8d1;
+      --page: #fff;
+      --fg: #111;
+      --muted: #555;
+      --line: #d8d3cd;
+      --accent: #856c00;
+      --max: 920px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    a { color: inherit; text-decoration: none; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(221, 216, 209, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+    }
+    .nav {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 1.4rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .brand {
+      font-size: clamp(1.45rem, 2vw, 1.85rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      font-size: 1.08rem;
+    }
+    .stack { padding: 2rem 1rem 4rem; }
+    .page {
+      max-width: var(--max);
+      margin: 0 auto 1.8rem;
+      padding: 3rem 3.2rem;
+      background: var(--page);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2.4rem;
+      letter-spacing: -0.04em;
+    }
+    h2 {
+      margin: 2rem 0 0.8rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--line);
+      font-size: 1.05rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    h3 {
+      margin: 1.35rem 0 0.45rem;
+      font-size: 1.02rem;
+      color: var(--fg);
+    }
+    p, li {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+    .header p { margin: 0.18rem 0; }
+    .timeline {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 0.6rem;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      gap: 1.1rem;
+      align-items: start;
+    }
+    .date {
+      font-weight: 700;
+      color: var(--fg);
+    }
+    .desc {
+      min-width: 0;
+    }
+    .pub-list,
+    .presentation-list {
+      margin: 0.7rem 0 0;
+      padding-left: 1.25rem;
+    }
+    .pub-list li,
+    .presentation-list li {
+      margin-bottom: 0.9rem;
+    }
+    .presentation-list li {
+      margin-bottom: 0.8rem;
+    }
+    .name {
+      font-weight: 700;
+      color: var(--fg);
+    }
+    .cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .expertise p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+    .tight p { margin: 0.35rem 0; }
+    @media (max-width: 860px) {
+      .page { padding: 2rem 1.4rem; }
+      .cols { grid-template-columns: 1fr; }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .row {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="index.html">Shengyuan Wang</a>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="Projects.html">Projects</a>
+        <a href="CV.html">CV</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="stack">
+    <section class="page">
+      <div class="header">
+        <h1>Shengyuan Wang, Ph.D.</h1>
+        <p><strong>Postdoctoral Research Associate</strong></p>
+        <p>Department of Genome Sciences</p>
+        <p>School of Medicine</p>
+        <p>University of Virginia</p>
+        <p>Charlottesville, Virginia</p>
+        <p>michaelwang1335@gmail.com | (919) 720-3231</p>
+      </div>
+
+      <h2>Education and Training</h2>
+      <div class="timeline">
+        <div class="row"><div class="date">2022-Present</div><div class="desc">Postdoc Research Associate, Department of Genome Sciences, University of Virginia, Charlottesville, VA</div></div>
+        <div class="row"><div class="date">2016-2022</div><div class="desc">Ph.D., Bioinformatics and Computational Biology, George Mason University</div></div>
+        <div class="row"><div class="date">2014-2016</div><div class="desc">M.S., Pharmaceutical Sciences, North Carolina Central University</div></div>
+        <div class="row"><div class="date">2009-2013</div><div class="desc">B.S., Biotechnology, China Agricultural University</div></div>
+      </div>
+
+      <h2>Areas of Expertise</h2>
+      <div class="cols expertise">
+        <div>
+          <p>Computational Biology</p>
+          <p>Next Generation Sequencing</p>
+          <p>Machine Learning</p>
+        </div>
+        <div>
+          <p>Functional Genomics</p>
+          <p>Bioinformatics Pipeline Development</p>
+          <p>Python, R, Linux, Git, SQL</p>
+        </div>
+        <div>
+          <p>Transcriptional Regulation</p>
+          <p>Data Analysis and Visualization</p>
+          <p>High-Performance Computing</p>
+        </div>
+      </div>
+
+      <h2>Publications</h2>
+      <ul class="pub-list">
+        <li><span class="name">Wang, Shengyuan</span>, et al. <em>Transcriptional condensates at super-enhancers mediate pH-dependent transcriptional control in innate immunity.</em> bioRxiv (2025): 2025-10. <a href="https://doi.org/10.1101/2025.10.29.685293" target="_blank" rel="noreferrer">https://doi.org/10.1101/2025.10.29.685293</a></li>
+        <li><span class="name">Shengyuan Wang</span>, Zhenjia Wang, Chongzhi Zang, <em>Genomic clustering tendency of transcription factors reflects phase-separated transcriptional condensates at super-enhancers</em>, Nucleic Acids Research, Volume 53, Issue 3, 10 February 2025, gkaf015. <a href="https://doi.org/10.1093/nar/gkaf015" target="_blank" rel="noreferrer">https://doi.org/10.1093/nar/gkaf015</a></li>
+        <li><span class="name">Shengyuan Wang</span>, et al. <em>CTCFDB: a systematic framework and comprehensive data resource for CTCF binding in the human genome.</em> Cancer Research 85.8_Supplement_1 (2025): 1074-1074. <a href="https://doi.org/10.1158/1538-7445.AM2025-1074" target="_blank" rel="noreferrer">https://doi.org/10.1158/1538-7445.AM2025-1074</a>. <a href="https://www.ctcf.info" target="_blank" rel="noreferrer">https://www.ctcf.info</a></li>
+        <li>Ma, Z., Liu, M., <span class="name">Wang, S.</span>, Wang, S., &amp; Zang, C. <em>Differential analysis of image-based chromatin tracing data with Dory.</em> bioRxiv, 2026-02. <a href="https://www.biorxiv.org/content/10.64898/2026.02.19.706897v1" target="_blank" rel="noreferrer">https://www.biorxiv.org/content/10.64898/2026.02.19.706897v1</a></li>
+        <li>Prajapati, S. C., Meydan, C., Neelamraju, Y., Wang, Z., Atwood, G., Paudel, B. B., Fan, H., Dunham, N., Dillon, R., Gandara, J. A., Lee, T., Sheridan, C., <span class="name">Wang, S.</span>, Zumbo, P., Becker, M. W., Bullinger, L., Carroll, M. P., D’Andrea, R. J., Levine, R. L., Mason, C., Melnick, A. M., Zang, C., Bekiranov, S., &amp; Garrett-Bakelman, F. E. <em>CCAAT-enhancer binding protein delta functions as a tumor suppressor gene in acute myeloid leukemia.</em> Neoplasia. (in press).</li>
+        <li>Nguyen, Y., Sibley, L., Przanowski, P., Zhao, X. Y., Kovacs, M., <span class="name">Wang, S.</span>, ... &amp; Zong, H. <em>Toxoplasma Gondii Infection Supports the Infiltration of T Cells into Brain Tumors.</em> Journal of Neuroimmunology 393 (2024): 578402. <a href="https://doi.org/10.1016/j.jneuroim.2024.578402" target="_blank" rel="noreferrer">https://doi.org/10.1016/j.jneuroim.2024.578402</a></li>
+        <li><span class="name">Wang, S.</span>, Wang, Z., Wang, Y. H., Li, H., Stukenburg, P. T., &amp; Zang, C. (2024). <em>Integration analysis of lncRNAs and R-loops in 3D genome organization and gene regulation in the cancer genome.</em> Cancer Research, 84(6_Supplement), 7355-7355. <a href="https://doi.org/10.1158/1538-7445.AM2024-7355" target="_blank" rel="noreferrer">https://doi.org/10.1158/1538-7445.AM2024-7355</a></li>
+        <li>Al Awak, M.M., Wang, P., <span class="name">Wang, S.</span>, Tang, Y., Sun, Y.P. and Yang, L., 2017. <em>Correlation of carbon dots' light-activated antimicrobial activities and fluorescence quantum yield.</em> RSC Advances, 7(48), pp.30177-30184. <a href="https://doi.org/10.1039/C7RA05397E" target="_blank" rel="noreferrer">https://doi.org/10.1039/C7RA05397E</a></li>
+        <li>Meziani, M.J., Dong, X., Zhu, L., Jones, L.P., LeCroy, G.E., Yang, F., <span class="name">Wang, S.</span>, Wang, P., Zhao, Y., Yang, L. and Tripp, R.A., 2016. <em>Visible-light-activated bactericidal functions of carbon “Quantum” dots.</em> ACS Applied Materials &amp; Interfaces, 8(17), pp.10761-10766. <a href="https://doi.org/10.1021/acsami.6b01765" target="_blank" rel="noreferrer">https://doi.org/10.1021/acsami.6b01765</a></li>
+        <li><span class="name">Wang, S.</span>, LeCroy, G.E., Yang, F., Dong, X., Sun, Y.P. and Yang, L., 2015. <em>Carbon nanotube-assisted capturing of bacterial pathogens.</em> RSC Advances, 5(111), pp.91246-91253. <a href="https://doi.org/10.1039/C5RA16684E" target="_blank" rel="noreferrer">https://doi.org/10.1039/C5RA16684E</a></li>
+      </ul>
+      <h2>Presentations</h2>
+      <h3>Oral Presentations</h3>
+      <ul class="presentation-list">
+        <li>Comprehensive Integration of CTCF Binding Across Cell Types for Cancer Genomics and Epigenetics Research, Commonwealth of Virginia Cancer Research Conference, Richmond, VA, 2025</li>
+        <li>Spatially clustered pattern of transcription factor binding reveals phase-separated transcriptional condensates at super-enhancers, invited speaker, 5th Annual Emerging Scholars in Genome Sciences Symposium 2024, University of Virginia, Charlottesville, VA, 2024</li>
+        <li>Integration analysis of lncRNAs and R-loops in 3D genome organization and gene regulation in the cancer genome, 2024 Postdoctoral Research Symposium, University of Virginia, Charlottesville, VA, 2024</li>
+      </ul>
+
+      <h3>Poster Presentations</h3>
+      <ul class="presentation-list">
+        <li>Transcriptional condensates at super-enhancers mediate pH-dependent transcriptional regulation in innate immunity and human cancer, Cold Spring Harbor Laboratory Meeting: Systems Biology- Global Regulation of Gene Expression, Cold Spring Harbor, NY, 2026</li>
+        <li>CTCFDB: a systematic framework and comprehensive data resource for CTCF binding in the human genome, AACR Annual Meeting, Chicago, IL, 2025</li>
+        <li>An integrated data resource and comprehensive data-driven approach to study CTCF binding in the human genome, RNA Center Inaugural Retreat, University of Virginia, Charlottesville, VA, 2025</li>
+        <li>Spatially clustered pattern of transcription factor binding reveals phase-separated transcriptional condensates at super-enhancers, NIH NCI Histone Modifications and Chromatin Structure Symposium, National Institutes of Health, Bethesda, MD, 2024</li>
+        <li>Integration analysis of lncRNAs and R-loops in 3D genome organization and gene regulation in the cancer genome, AACR Annual Meeting, San Diego, CA, 2024</li>
+        <li>Roles of lncRNAs and R-loops in 3D genome organization and gene regulation in the cancer genome, BMG Annual Retreat, University of Virginia, Charlottesville, VA, 2022</li>
+        <li>Analysis of topological properties of cancer-causing synonymous mutations, Frontiers of Computing in Health and Society, George Mason University, Virtually, 2021</li>
+        <li>ValgusHel: A novel method to identify and characterize kinked alpha-helices, The Protein Society - 35th Anniversary Symposium, Virtually, 2021</li>
+        <li>Structural and topological variations in amino acid residues encoded by synonymous codons, AAAS Annual Meeting, Washington D.C., 2019</li>
+        <li>Investigation of polymer-functionalized carbon nanotube-coated filters for removal of bacterial pathogens, Institute of Biological Engineering Annual Conference, Greenville, SC, 2016</li>
+      </ul>
+
+      <h2>Scholarships, Awards and Honors</h2>
+      <div class="timeline">
+        <div class="row"><div class="date">2024</div><div class="desc">Emerging Scholar Recipient, 5th Annual Emerging Scholars in Genome Sciences Symposium, University of Virginia</div></div>
+        <div class="row"><div class="date">2024</div><div class="desc">Cancer Center Trainee Fellowship, University of Virginia</div></div>
+        <div class="row"><div class="date">2024</div><div class="desc">Cancer Center Trainee Travel Funds, University of Virginia</div></div>
+        <div class="row"><div class="date">2021</div><div class="desc">Outstanding Oral Presentation, Student Research Day, George Mason University</div></div>
+        <div class="row"><div class="date">2019</div><div class="desc">Graduate Student Outreach Award, George Mason University</div></div>
+        <div class="row"><div class="date">2016-2021</div><div class="desc">Presidential Scholarship, George Mason University</div></div>
+        <div class="row"><div class="date">2016</div><div class="desc">First Place in Poster Presentation in Graduate Research Symposium, North Carolina Central University</div></div>
+        <div class="row"><div class="date">2015</div><div class="desc">Outstanding Graduate Research in Pharmaceutical Sciences, North Carolina Central University</div></div>
+        <div class="row"><div class="date">2014-2016</div><div class="desc">Graduate Research Assistantship, North Carolina Central University</div></div>
+      </div>
+
+      <h2>Journal Reviews</h2>
+      <p>Reviewer for Cancer Research, Nucleic Acid Research</p>
+      <p>Ad hoc reviewer for Nature Cancer, Bioinformatics, and Genome Biology</p>
+
+      <h2>Mentoring Experience</h2>
+      <div class="timeline">
+        <div class="row"><div class="date">2023-Present</div><div class="desc">Mentor of two undergraduate students, University of Virginia, Charlottesville, VA</div></div>
+        <div class="row"><div class="date">2021</div><div class="desc">Instructor, Aspiring Scientists Summer Internship Program, George Mason University, Manassas, VA</div></div>
+        <div class="row"><div class="date">2019</div><div class="desc">Instructor, International Society for Computational Biology (ISCB) Youth Bioinformatics Symposium, George Mason University, Manassas, VA</div></div>
+      </div>
+
+      <h2>Certificates</h2>
+      <div class="timeline">
+        <div class="row"><div class="date">2020</div><div class="desc">AWS Fundamentals: Going Cloud-Native authorized by Amazon Web Services, Coursera</div></div>
+        <div class="row"><div class="date">2020</div><div class="desc">Genomic Data Science, an 8-course specialization by John Hopkins University, Coursera</div></div>
+        <div class="row"><div class="date">2019</div><div class="desc">Deep Learning, a 5-course specialization by deeplearning.ai, Coursera</div></div>
+        <div class="row"><div class="date">2019</div><div class="desc">Machine Learning by Stanford University, Coursera</div></div>
+      </div>
+    </section>
+  </main>
+  <footer style="max-width: 920px; margin: 0 auto; padding: 0 1rem 2rem; color: #666; font-size: 0.95rem; text-align: center;">&copy; 2026 Shengyuan Wang at the University of Virginia</footer>
+</body>
+</html>
