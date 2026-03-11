@@ -67,7 +67,7 @@
     .hero-grid {
       display: grid;
       grid-template-columns: minmax(320px, 520px) minmax(320px, 1fr);
-      gap: 3.2rem;
+      gap: 2.4rem;
       align-items: start;
     }
 
@@ -77,6 +77,13 @@
       overflow: hidden;
       box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
       align-self: start;
+      max-width: 460px;
+      margin-left: 1.9rem;
+      margin-top: 2.7rem;
+    }
+
+    .hero-copy {
+      margin-left: -0.5rem;
     }
 
     .portrait-wrap img {
@@ -188,7 +195,7 @@
       <div class="portrait-wrap">
         <img src="static/headshot.jpg" alt="Headshot of Shengyuan Wang">
       </div>
-      <div>
+      <div class="hero-copy">
         <p class="eyebrow">Computational Biologist</p>
         <h1><span>Turning genomics data into</span><span>usable biological insights.</span></h1>
         <p class="lead">
