@@ -123,14 +123,11 @@
     }
     .cols {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.5rem;
-    }
-    .cols > div:nth-child(2) {
-      margin-left: -0.35rem;
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
     }
     .expertise p {
-      margin: 0.3rem 0;
+      margin: 0.2rem 0;
       font-size: 0.95rem;
       white-space: normal;
     }
@@ -159,7 +156,6 @@
     .tight p { margin: 0.35rem 0; }
     @media (max-width: 860px) {
       .page { padding: 2rem 1.4rem; }
-      .cols { grid-template-columns: 1fr; }
       .nav {
         flex-direction: column;
         align-items: flex-start;
