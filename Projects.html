@@ -113,23 +113,20 @@
     <h1>Projects</h1>
 
     <section class="project">
-      <h2>Transcriptional condensates at super-enhancers mediate pH-dependent transcriptional regulation in innate immunity and human cancer</h2>
+      <h2>Multi-omics integration and statistical modeling of BRD4-mediated transcriptional condensates identifies transcription factors linked to clinical outcomes</h2>
       <p>
-        This project combined genome-wide region-centric analysis, differential signal modeling, and interpretation of pH-sensitive regulatory behavior, using multi-omics integration to identify potential biomarkers associated with BRD4-mediated transcriptional condensates in close coordination with experimental collaborators.
+        Using statistical modeling and multi-omics integration, I analyzed BRD4 and H3K27ac ChIP-seq, ATAC-seq, and RNA-seq datasets across multiple conditions to identify candidate transcriptional regulators associated with BRD4-mediated, pH-sensitive transcriptional condensates in mouse macrophages. This analysis identified RELA, IRF family, and STAT family transcription factors as candidate regulators, and experimental validation confirmed that their binding patterns were aligned with BRD4 across pH conditions.
       </p>
       <p style="margin-top: 1rem;">
-        By integrating epigenomic datasets, including BRD4 and H3K27ac ChIP-seq, ATAC-seq, and transcriptomics RNA-seq across multiple conditions, I identified RELA, IRF family, and STAT family transcription factors as candidate regulators associated with BRD4-mediated, pH-sensitive transcriptional condensates in mouse macrophages. Experimental validation further confirmed that these transcription factors showed binding patterns aligned with BRD4 across pH conditions.
-      </p>
-      <p style="margin-top: 1rem;">
-        Using statistical modeling and survival analysis, I also identified candidate transcriptional regulators associated with patient survival in colon cancer, with putative transcriptional condensate activity in colon tumor cells is more likely to correlate with poor prognosis, whereas T cell-associated transcriptional condensate activity is more likely to be linked to better survival.
+        Using multivariable survival analysis, I further identified candidate transcriptional regulators associated with patient survival in colon cancer. The analysis suggested that putative transcriptional condensate activity in colon tumor cells was more likely to correlate with poor prognosis, whereas T cell-associated transcriptional condensate activity was more likely to be linked to better survival.
       </p>
       <p class="source">Source: <a href="https://doi.org/10.1101/2025.10.29.685293" target="_blank" rel="noreferrer">bioRxiv</a> | <a href="https://github.com/miotomato/BRD4_condensate_TR" target="_blank" rel="noreferrer">GitHub</a> | <a href="static/pHcondensates.png" target="_blank" rel="noreferrer">Poster</a></p>
     </section>
 
     <section class="project">
-      <h2>CTCFexplorer: a systematic framework and comprehensive data resource for CTCF binding in the human and mouse genomes</h2>
+      <h2>Large-scale ChIP-seq data integration and SQL-based genomic resource development for CTCF binding analysis</h2>
       <p>
-        I built CTCFexplorer (<a href="https://www.ctcf.info" target="_blank" rel="noreferrer">www.ctcf.info</a>), an SQL-backed, user-friendly data resource and web platform that integrates more than 4,000 public CTCF ChIP-seq datasets from human and mouse into a searchable database. Using a robust processing pipeline that includes metadata curation, quality control, and statistical analysis, the platform identifies constitutive and cell type-specific CTCF binding events at genome scale. It is designed to turn large public datasets into practical and accessible resources for data mining, querying, and downstream biological interpretation of CTCF binding.
+        I built CTCFexplorer (<a href="https://www.ctcf.info" target="_blank" rel="noreferrer">www.ctcf.info</a>), an SQL-backed, user-friendly genomic data resource and web platform that integrates more than 4,000 public human and mouse CTCF ChIP-seq datasets into a searchable database. The workflow begins with large-scale data collection from public repositories, metadata curation, data cleaning, quality control, and standardized ChIP-seq processing, followed by peak calling, integration of thousands of peak files, and statistical analysis to identify constitutive and cell type-specific CTCF binding events at genome scale. I then structured the processed data into SQL tables and developed a web-accessible database to support querying, visualization, data mining, and downstream biological interpretation of CTCF binding. The platform also includes GitHub-based CI/CD auto-deployment to support maintainable updates and reproducible delivery of the web resource.
       </p>
       <p class="source">Source: <a href="https://www.ctcf.info" target="_blank" rel="noreferrer">ctcf.info</a> | <a href="https://doi.org/10.1158/1538-7445.AM2025-1074" target="_blank" rel="noreferrer">Cancer Research</a> | <a href="https://github.com/miotomato/CTCFexplorer" target="_blank" rel="noreferrer">GitHub</a> | <a href="static/CTCFexplorer.png" target="_blank" rel="noreferrer">Poster</a></p>
     </section>
