@@ -115,39 +115,56 @@
     <section class="project">
       <h2>Multi-omics integration and statistical modeling of BRD4-mediated transcriptional condensates identifies transcription factors linked to clinical outcomes</h2>
       <p>
-        Using statistical modeling and multi-omics integration, I analyzed BRD4 and H3K27ac ChIP-seq, ATAC-seq, and RNA-seq datasets across multiple conditions to identify candidate transcriptional regulators associated with BRD4-mediated, pH-sensitive transcriptional condensates in mouse macrophages. This analysis identified RELA, IRF family, and STAT family transcription factors as candidate regulators, and experimental validation confirmed that their binding patterns were aligned with BRD4 across pH conditions.
+        I collaborated with experimental biologists to investigate how acidic pH affects BRD4-mediated transcriptional condensates, immune gene regulation, and cancer-relevant regulatory programs. I integrated ATAC-seq, ChIP-seq, RNA-seq, and TCGA clinical outcome data across biological conditions, then applied statistical modeling, differential signal analysis, unsupervised clustering, transcription factor regulatory analysis, and survival analysis to connect epigenomic changes with transcriptional regulation and clinical outcome associations.
       </p>
       <p style="margin-top: 1rem;">
-        Using multivariable survival analysis, I further identified candidate transcriptional regulators associated with patient survival in colon cancer. The analysis suggested that putative transcriptional condensate activity in colon tumor cells was more likely to correlate with poor prognosis, whereas T cell-associated transcriptional condensate activity was more likely to be linked to better survival.
+        This analysis identified RELA, IRF family, and STAT family transcription factors as candidate regulators associated with BRD4-mediated, pH-sensitive transcriptional condensates in mouse macrophages. Experimental validation confirmed that these factors showed binding patterns aligned with BRD4 across pH conditions. In colon cancer, multivariable survival analysis further linked putative condensate-associated regulatory activity in tumor cells to poorer prognosis, while T cell-associated regulatory activity was more likely associated with better survival.
       </p>
       <p class="source">Source: <a href="https://doi.org/10.1101/2025.10.29.685293" target="_blank" rel="noreferrer">bioRxiv</a> | <a href="https://github.com/miotomato/BRD4_condensate_TR" target="_blank" rel="noreferrer">GitHub</a> | <a href="static/pHcondensates.png" target="_blank" rel="noreferrer">Poster</a></p>
     </section>
 
     <section class="project">
-      <h2>Large-scale ChIP-seq data integration and SQL-based genomic resource development for CTCF binding analysis</h2>
+      <h2>Large-scale CTCF ChIP-seq integration and SQL-based genomic resource development</h2>
       <p>
-        I built CTCFexplorer (<a href="https://www.ctcf.info" target="_blank" rel="noreferrer">www.ctcf.info</a>), an SQL-backed, user-friendly genomic data resource and web platform that integrates more than 4,000 public human and mouse CTCF ChIP-seq datasets into a searchable database. The workflow begins with large-scale data collection from public repositories, metadata curation, data cleaning, quality control, and standardized ChIP-seq processing, followed by peak calling, integration of thousands of peak files, and statistical analysis to identify constitutive and cell type-specific CTCF binding events at genome scale. I then structured the processed data into SQL tables and developed a web-accessible database to support querying, visualization, data mining, and downstream biological interpretation of CTCF binding. The platform also includes GitHub-based CI/CD auto-deployment to support maintainable updates and reproducible delivery of the web resource.
+        I built CTCFexplorer (<a href="https://www.ctcf.info" target="_blank" rel="noreferrer">www.ctcf.info</a>), a PostgreSQL-backed genomic data resource and web platform for large-scale CTCF binding analysis. I collected, curated, and standardized 2,097 human and 1,345 mouse CTCF ChIP-seq datasets from NCBI GEO across diverse cell types, then developed a workflow for metadata curation, data cleaning, quality control, peak calling, signal processing, genome-wide binding integration, and statistical analysis.
+      </p>
+      <p style="margin-top: 1rem;">
+        The integrated analysis defined 531,851 high-confidence human and 297,825 mouse CTCF binding sites and identified constitutive and cell type-specific CTCF binding events at genome scale. I structured the processed data into SQL tables and built a web-accessible resource supporting search, visualization, download, data mining, and regulatory interpretation. The project also uses GitHub-based CI/CD auto-deployment to support reproducible updates and maintainable delivery of the public database.
       </p>
       <p class="source">Source: <a href="https://www.ctcf.info" target="_blank" rel="noreferrer">ctcf.info</a> | <a href="https://doi.org/10.1158/1538-7445.AM2025-1074" target="_blank" rel="noreferrer">Cancer Research</a> | <a href="https://github.com/miotomato/CTCFexplorer" target="_blank" rel="noreferrer">GitHub</a> | <a href="static/CTCFexplorer.png" target="_blank" rel="noreferrer">Poster</a></p>
     </section>
 
     <section class="project">
-      <h2>Genomic clustering tendency of transcription factors reflects phase-separated transcriptional condensates at super-enhancers</h2>
+      <h2>Statistical framework for transcription factor clustering and disease-relevant regulatory mechanism analysis</h2>
       <p>
-        I developed a statistical framework to quantify genome-wide clustering patterns of transcription factor motifs and binding organization. These clustering patterns are linked to transcriptional condensates at super-enhancers. Genomic regions with densely clustered transcription factor binding sites are more enriched at cell type-specific super-enhancers and exhibit higher chromatin accessibility, stronger chromatin interactions, and greater association with cancer outcomes.
+        I developed a quantitative framework to measure genomic clustering tendency of transcription factor motifs and ChIP-seq binding profiles at genome scale. The analysis covered 571 human transcription factor sequence motifs and 6,650 transcription factor ChIP-seq profiles across diverse cell types, enabling systematic comparison of how transcription factors cluster in regulatory regions and how these patterns relate to super-enhancer biology.
+      </p>
+      <p style="margin-top: 1rem;">
+        I integrated super-enhancer annotations, ATAC-seq, Hi-C, LLPS-related protein properties, ICGC mutation data, and TCGA clinical outcome data to connect clustered transcription factor binding with chromatin accessibility, chromatin interactions, transcriptional condensate biology, cancer mutation patterns, and patient survival. This work identified clustered transcription factor binding as a data-driven feature associated with cell-type-specific super-enhancers, active regulatory regions, and cancer-relevant transcriptional mechanisms.
       </p>
       <p class="source">Source: <a href="https://doi.org/10.1093/nar/gkaf015" target="_blank" rel="noreferrer">Nucleic Acids Research</a> | <a href="https://github.com/miotomato/Genomic_Clustering_Tendency_Transcriptional_Condensate" target="_blank" rel="noreferrer">GitHub</a></p>
     </section>
 
     <section class="project">
-      <h2>Topology-based machine learning analysis of chromatin structure for cell-type classification using multiplexed chromatin tracing data</h2>
+      <h2>Machine learning framework for cell-type-specific 3D chromatin structure analysis</h2>
       <p>
-        I developed machine learning models to classify cell types from multiplexed chromatin tracing data, with a focus on feature design, model development, evaluation, and biological interpretation. I applied a topology-based representation of chromatin structure using Delaunay tessellation and constructed features from thousands of spatial topological units. Using these features, I trained and evaluated random forest classifiers on mouse cortex chromatin tracing data. The models achieved an overall accuracy of ~0.75 for distinguishing major cell types, compared with ~0.5 accuracy from random controls. Pairwise classification performance further revealed clustering patterns consistent with known major cortical cell classes.
+        I developed an end-to-end supervised machine learning workflow for single-cell spatial chromatin tracing data from mouse cortex. The workflow included data cleaning, coordinate imputation, Delaunay tessellation-based 3D feature engineering, random forest classification, 5-fold cross-validation, learning-curve analysis, visualization, and biological interpretation.
       </p>
       <p style="margin-top: 1rem;">
-        In this project, I designed and implemented the full analysis pipeline, including data preprocessing and curation, coordinate imputation, feature engineering, machine learning model training, performance evaluation, and interpretation of results. This work demonstrates the feasibility of applying machine learning and topology-based feature design to extract biologically meaningful patterns from spatial chromatin organization data.
+        I converted 39,735 single-cell chromatin traces into 11,628 structural edge features and achieved approximately 0.8 classification accuracy for major cell-type groups, demonstrating that 3D chromatin architecture contains cell-type-specific structural signals. The project shows how topology-based feature design and supervised learning can extract interpretable biological patterns from high-dimensional spatial genome organization data.
       </p>
       <p class="source">Source: <a href="https://github.com/miotomato/Chromatin_tracing_celltype_classification_ML" target="_blank" rel="noreferrer">GitHub</a></p>
+    </section>
+
+    <section class="project">
+      <h2>Protein sequence-structure-function modeling using topology-based computational methods</h2>
+      <p>
+        I built a curated structural protein dataset of 10,220 nonredundant protein chains with codon, amino acid, secondary-structure, and Cα-coordinate annotations. I developed Delaunay tessellation-based topology features and amino-acid/codon-level statistical potentials to model relationships among synonymous codons, protein topology, secondary structure, and function.
+      </p>
+      <p style="margin-top: 1rem;">
+        I applied computational mutagenesis, statistical testing, and machine learning to assess cancer-associated synonymous mutations and alpha-helix structural patterns. This work extended protein topology modeling from amino-acid-level analysis to codon-level interpretation and provided a quantitative framework for evaluating how sequence variation may influence protein structure and function.
+      </p>
+      <p class="source">Source: <a href="https://github.com/miotomato/Protein_Sequence-Structure_Database_and_Machine_Learning_Analysis" target="_blank" rel="noreferrer">GitHub</a></p>
     </section>
   </main>
   <footer style="max-width: 1080px; margin: 0 auto; padding: 0 1.25rem 2rem; color: #666; font-size: 0.95rem; text-align: center;">&copy; 2026 Shengyuan Wang at the University of Virginia</footer>
